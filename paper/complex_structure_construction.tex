@@ -1,0 +1,280 @@
+\section{Construction of the Symmetry-Induced Complex Structure}
+
+We now construct the canonical complex structure operator determined by one-parameter distinguishability symmetry and show that it equips the invariant subspace \(\mathcal{K}_1\) with the structure of a complex Hilbert space.
+
+\subsection{Definition of the complex structure operator}
+
+As established in Section 2, the invariant subspace admits the characterization
+\[
+\mathcal{K}_1 = \ker(A)^\perp = E((0,\infty))\,\overline{\mathcal{V}}.
+\]
+
+Since \(A\) is skew-adjoint, the operator
+\[
+-A^2
+\]
+is densely defined, self-adjoint, and positive semidefinite
+\cite[Theorem VIII.4]{ReedSimonI}.
+
+By the spectral theorem for self-adjoint operators
+\cite[Theorem VII.2]{ReedSimonI}, there exists a projection-valued measure
+\(E(\lambda)\) such that
+\[
+-A^2 = \int_0^\infty \lambda \, dE(\lambda).
+\]
+
+On the invariant subspace \(\mathcal{K}_1\), the operator \(-A^2\) has trivial kernel. The functional calculus therefore defines the positive self-adjoint operator
+\[
+|A| := (-A^2)^{1/2}
+=
+\int_{(0,\infty)} \lambda^{1/2} \, dE(\lambda),
+\]
+with dense domain equal to \(\mathcal K_1\)
+\cite[Theorem VIII.6]{ReedSimonI}.
+
+The inverse operator
+\[
+|A|^{-1}
+=
+(-A^2)^{-1/2}
+=
+\int_{(0,\infty)} \lambda^{-1/2} \, dE(\lambda)
+\]
+is defined as a bounded operator on \(\mathcal K_1\) when interpreted via the polar decomposition of the normal operator \(A\), where it appears in the bounded product
+\[
+J = A|A|^{-1}
+\]
+defining the partial isometry \(J\)
+\cite[Theorem VI.13; Theorem VIII.6]{ReedSimonI}.
+
+Since \(A\) is a closed densely defined operator, it admits a polar decomposition
+\[
+A = J |A|
+\]
+where \(J\) is a partial isometry with initial space
+\[
+\overline{\mathrm{ran}(|A|)} = \ker(A)^\perp = \mathcal{K}_1
+\]
+and final space
+\[
+\overline{\mathrm{ran}(A)} = \mathcal{K}_1
+\]
+\cite[Theorem VI.13]{ReedSimonI}.
+
+Because the initial and final spaces coincide, the partial isometry \(J\) restricts to a unitary operator on \(\mathcal{K}_1\).
+
+Multiplying the polar decomposition on the right by \(|A|^{-1}\) yields
+\[
+J = A |A|^{-1}
+=
+A(-A^2)^{-1/2}
+\quad \text{on } \mathcal{K}_1.
+\]
+
+Since \(|A|^{-1}\) is bounded on \(\mathcal{K}_1\), it follows that \(J\) is bounded on \(\mathcal{K}_1\).
+
+This operator is uniquely determined by the symmetry generator through its polar decomposition, given the real Hilbert representation and symmetry assumption.
+
+\subsection{Algebraic properties of the complex structure operator}
+
+We now establish the fundamental structural properties of \(J\).
+
+\begin{proposition}
+The operator \(J\) satisfies
+\[
+J^2 = -I
+\]
+on the invariant subspace \(\mathcal{K}_1\).
+\end{proposition}
+
+\begin{proof}
+
+Since \(A\) is skew-adjoint, it is a normal operator:
+\[
+A^*A = AA^*.
+\]
+
+Therefore, by the polar decomposition theorem for closed normal operators,
+the partial isometry \(J\) in the polar decomposition
+\[
+A = J|A|
+\]
+commutes with \(|A|\) and all bounded Borel functions of \(|A|\)
+\cite[Theorem VI.13; Theorem VIII.6]{ReedSimonI}.
+
+On the invariant subspace \(\mathcal{K}_1 = \ker(A)^\perp\), the operator
+\(|A|\) has trivial kernel and therefore admits a bounded inverse.
+
+Multiplying the polar decomposition on the left by \(|A|^{-1}\) gives
+\[
+|A|^{-1}A
+=
+|A|^{-1}J|A|.
+\]
+
+Using the commutation of \(J\) and \(|A|\), we obtain
+\[
+|A|^{-1}J|A|
+=
+J|A|^{-1}|A|
+=
+J.
+\]
+
+Thus
+\[
+|A|^{-1}A = J.
+\]
+
+Multiplying both sides on the right by \(|A|^{-1}A\) yields
+\[
+J^2
+=
+|A|^{-1}A|A|^{-1}A
+=
+|A|^{-2}A^2.
+\]
+
+Since
+\[
+A^2 = -|A|^2,
+\]
+
+it follows that
+\[
+J^2 = -I
+\quad \text{on } \mathcal{K}_1.
+\]
+
+\end{proof}
+
+\begin{proposition}
+The operator \(J\) is skew-adjoint:
+\[
+J^* = -J.
+\]
+\end{proposition}
+
+\begin{proof}
+
+Since \(A\) is skew-adjoint and \(|A|^{-1}\) is self-adjoint,
+\[
+J^*
+=
+\left(A|A|^{-1}\right)^*
+=
+|A|^{-1} A^*
+=
+-|A|^{-1} A.
+\]
+
+Using commutation of \(J\) and \(|A|\),
+\[
+|A|^{-1}A
+=
+|A|^{-1}J|A|
+=
+J.
+\]
+
+Therefore,
+\[
+J^* = -J.
+\]
+
+\end{proof}
+
+\begin{proposition}
+The operator \(J\) is orthogonal:
+\[
+\langle J\psi, J\phi \rangle
+=
+\langle \psi, \phi \rangle
+\quad \forall \psi,\phi \in \mathcal{K}_1.
+\]
+\end{proposition}
+
+\begin{proof}
+
+Using skew-adjointness and \(J^2=-I\),
+\[
+\langle J\psi, J\phi \rangle
+=
+\langle \psi, J^*J \phi \rangle
+=
+\langle \psi, (-J^2)\phi \rangle
+=
+\langle \psi, \phi \rangle.
+\]
+
+\end{proof}
+
+\subsection{Induced complex Hilbert structure}
+
+We now use \(J\) to define complex scalar multiplication on \(\mathcal{K}_1\).
+
+For real scalars \(a,b \in \mathbb{R}\), define
+\[
+(a+ib)\psi := a\psi + bJ\psi.
+\]
+
+Since \(J^2=-I\), this defines a valid complex vector space structure.
+
+Define the complex inner product
+\[
+\langle \psi, \phi \rangle_{\mathbb{C}}
+:=
+\langle \psi, \phi \rangle
+-
+i\langle \psi, J\phi \rangle.
+\]
+
+\begin{theorem}[Complex structure compatibility]
+Given the real Hilbert representation and strongly continuous symmetry assumption, the invariant subspace \(\mathcal{K}_1\), equipped with this scalar multiplication and inner product, is a complex Hilbert space.
+\end{theorem}
+
+\begin{proof}
+
+We verify conjugate symmetry. Using the definition of the complex inner product and skew-adjointness of \(J\), we compute
+
+\begin{align*}
+\overline{\langle \phi,\psi\rangle_{\mathbb{C}}}
+&=
+\overline{
+\langle \phi,\psi\rangle
+-
+i\langle \phi,J\psi\rangle
+} \\
+&=
+\langle \psi,\phi\rangle
++
+i\langle \phi,J\psi\rangle \\
+&=
+\langle \psi,\phi\rangle
+-
+i\langle \psi,J\phi\rangle \\
+&=
+\langle \psi,\phi\rangle_{\mathbb{C}},
+\end{align*}
+
+where the third line uses skew-adjointness of \(J\), namely
+\(
+\langle \phi,J\psi\rangle = -\langle J\phi,\psi\rangle = -\langle \psi,J\phi\rangle.
+\)
+
+Positive definiteness follows from positivity of the original inner product.
+
+The induced norm satisfies
+\[
+\|\psi\|_{\mathbb{C}}^2
+=
+\langle \psi,\psi\rangle_{\mathbb{C}}
+=
+\|\psi\|^2.
+\]
+
+Since \(\mathcal{K}_1\) is closed in the complete real Hilbert space \(\overline{\mathcal{V}}\), it is complete in this norm.
+
+\end{proof}
+
+Thus, given the real Hilbert representation and strongly continuous symmetry assumption, one-parameter distinguishability symmetry determines a canonical complex Hilbert structure on the invariant subspace \(\mathcal{K}_1\).

@@ -1,0 +1,91 @@
+\documentclass[11pt]{article}
+
+% --------------------------------------------------
+% Core mathematics packages
+% --------------------------------------------------
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{bm}
+
+% --------------------------------------------------
+% Formatting and hyperlinks
+% --------------------------------------------------
+
+\usepackage{geometry}
+\usepackage[hidelinks]{hyperref}
+
+\geometry{margin=1in}
+
+% --------------------------------------------------
+% Theorem environments
+% --------------------------------------------------
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+% --------------------------------------------------
+% Title and author
+% --------------------------------------------------
+
+\title{Symmetry-Induced Complexification of Distinguishability Representation}
+\author{A. R. Wells \\Dual-Frame Research Group}
+\date{\today}
+
+% --------------------------------------------------
+% Document
+% --------------------------------------------------
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+Distinguishability functionals satisfying explicit algebraic consistency conditions admit a canonical real Hilbert-space representation uniquely determined up to isometric isomorphism \cite{WellsMotionFirstQK_v1}. Given this real Hilbert representation and a strongly continuous one-parameter distinguishability symmetry, the representation admits a compatible complex Hilbert structure on the invariant subspace where the symmetry generator acts nontrivially.
+
+The present work analyzes the complex structure determined by such symmetry and establishes its uniqueness and representational intrinsicness. We prove that on each irreducible symmetry-invariant spectral sector, the symmetry generator determines a compatible complex structure uniquely up to sign, and that the complex structure constructed via functional calculus of the generator is intrinsic to the distinguishability kernel representation under canonical isometric identification of minimal realizations. Using the spectral theorem, we classify the invariant subspace into symmetry sectors, each inheriting a symmetry-compatible complex Hilbert structure.
+
+We further establish a structural limitation: a single strongly continuous one-parameter symmetry does not canonically determine quaternionic Hilbert structure. Such structure requires additional independent symmetry generators satisfying anticommuting relations generating the quaternion algebra.
+
+The analysis is entirely representational and introduces no probabilistic, measurement-theoretic, dynamical, or spacetime assumptions. These results identify the representational consequences of one-parameter symmetry within the distinguishability kernel framework and the precise conditions under which complex Hilbert structure follows canonically from the real Hilbert representation and symmetry assumption.
+
+\end{abstract}
+
+% --------------------------------------------------
+% Paper content
+% --------------------------------------------------
+
+\input{introduction.tex}
+
+\input{cyclic_symmetry_structure.tex}
+
+\input{complex_structure_construction.tex}
+
+\input{complex_structure_uniqueness.tex}
+
+\input{representation_intrinsicness.tex}
+
+\input{spectral_classification.tex}
+
+\input{quaternionic_obstruction.tex}
+
+\input{discussion.tex}
+
+% --------------------------------------------------
+% Bibliography
+% --------------------------------------------------
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

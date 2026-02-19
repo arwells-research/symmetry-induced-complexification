@@ -1,0 +1,47 @@
+# --- Project dirs to ignore ---
+paper/unused/
+
+# --- LaTeX build artifacts ---
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.toc
+*.lof
+*.lot
+*.synctex.gz
+*.synctex.gz(busy)
+*.nav
+*.snm
+*.vrb
+
+# latexmk / intermediate
+latexmkrc
+*.xdv
+
+# --- Build directories ---
+build/
+paper/build/
+**/build/
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# --- Python (if any scripts appear later) ---
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# --- Outputs ---
+*.pdf

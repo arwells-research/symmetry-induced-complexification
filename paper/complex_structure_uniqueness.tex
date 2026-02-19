@@ -1,0 +1,213 @@
+\section[Uniqueness and Canonical Status]{Uniqueness and Canonical Status of the Symmetry-Induced Complex Structure}
+
+In the preceding section, we constructed a complex structure operator
+\[
+J := A(-A^2)^{-1/2}
+\]
+on the invariant subspace
+\[
+\mathcal{K}_1 = \overline{\mathrm{ran}(A)} = \ker(A)^\perp.
+\]
+
+We now analyze the extent to which this complex structure is uniquely determined by the symmetry generator.
+
+\subsection{Symmetry-compatible complex structures}
+
+We begin by formalizing compatibility with the symmetry.
+
+\begin{definition}
+A symmetry-compatible complex structure on \(\mathcal{K}_1\) is a bounded linear operator
+\[
+J' : \mathcal{K}_1 \to \mathcal{K}_1
+\]
+satisfying:
+
+\begin{enumerate}
+
+\item Complex structure condition:
+\[
+(J')^2 = -I,
+\]
+
+\item Inner product preservation:
+\[
+\langle J'\psi, J'\phi \rangle
+=
+\langle \psi, \phi \rangle
+\quad \forall \psi,\phi \in \mathcal{K}_1,
+\]
+
+\item Symmetry compatibility (domain-qualified commutation):
+\[
+J'(\mathcal{D}(A)) \subset \mathcal{D}(A),
+\qquad
+J'A\psi = AJ'\psi
+\quad \forall \psi \in \mathcal{D}(A).
+\]
+
+\end{enumerate}
+
+\end{definition}
+
+This condition is equivalent to commutation with the strongly continuous symmetry group:
+\[
+J'T(t) = T(t)J'
+\quad \forall t \in \mathbb{R},
+\]
+by Stone's theorem for strongly continuous orthogonal groups
+\cite[Theorem VIII.4]{ReedSimonI}.
+
+Thus symmetry-compatible complex structures lie in the commutant of the symmetry representation.
+
+\subsection{Spectral decomposition and multiplicity structure}
+
+Since \(A\) is skew-adjoint, the operator \(-A^2\) is self-adjoint and positive semidefinite. By the spectral theorem, there exists a projection-valued measure \(E(\cdot)\) such that
+\[
+-A^2 = \int_0^\infty \lambda \, dE(\lambda),
+\]
+and the Hilbert space decomposes into spectral subspaces
+\[
+\overline{\mathcal V}
+=
+E(\{0\})\overline{\mathcal V}
+\;\oplus\;
+E((0,\infty))\overline{\mathcal V}
+=
+\mathcal K_0 \oplus \mathcal K_1
+\cite[Theorem VII.2]{ReedSimonI}.
+\]
+
+In a spectral representation of \(-A^2\), the invariant subspace \(\mathcal{K}_1\) may be realized as a direct integral
+\[
+\mathcal{K}_1
+\cong
+\int_{(0,\infty)}^\oplus H_\lambda \, d\mu(\lambda),
+\]
+where each fiber \(H_\lambda\) is a Hilbert space whose dimension equals the spectral multiplicity at \(\lambda\)
+\cite[Section VII.2]{ReedSimonI}.
+
+In this representation, the operator \(-A^2\) acts as multiplication:
+\[
+((-A^2)\psi)(\lambda) = \lambda \psi(\lambda),
+\]
+and operators commuting with the symmetry act fiberwise.
+
+Multiplicity-one fibers correspond to irreducible symmetry sectors, while higher multiplicity fibers admit additional commuting operators acting internally within multiplicity spaces.
+
+\subsection{Commutant structure on irreducible sectors}
+
+We now characterize symmetry-compatible operators on irreducible sectors.
+
+\begin{definition}
+A symmetry-invariant subspace \(\mathcal S \subset \mathcal K_1\) is irreducible if it contains no nontrivial closed subspace invariant under the symmetry group \(T(t)\).
+\end{definition}
+
+On such a subspace, the generator restricts to a skew-adjoint operator with spectrum consisting of a single positive frequency \(\omega>0\). The symmetry acts as planar rotation:
+\[
+T(t)|_{\mathcal S}
+=
+\begin{pmatrix}
+\cos(\omega t) & -\sin(\omega t) \\
+\sin(\omega t) & \cos(\omega t)
+\end{pmatrix}
+\]
+in a suitable orthonormal basis
+\cite{HallQM,VaradarajanGeometryQM}.
+
+For real irreducible rotation representations, the commutant algebra consists precisely of operators of the form
+\[
+aI + bJ,
+\quad a,b \in \mathbb R,
+\]
+where \(J\) is the canonical complex structure operator obtained via functional calculus of the generator.
+
+This follows from the classification of irreducible real representations of one-parameter rotation groups and their commutant algebras
+\cite{KadisonRingrose,VaradarajanGeometryQM}.
+
+\subsection{Sectorwise uniqueness}
+
+We now establish uniqueness of symmetry-compatible complex structure on irreducible sectors.
+
+\begin{theorem}[Sectorwise uniqueness up to sign]
+Let \(\mathcal S \subset \mathcal K_1\) be an irreducible symmetry-invariant subspace.
+
+Then any symmetry-compatible complex structure operator
+\[
+J' : \mathcal S \to \mathcal S
+\]
+satisfies
+\[
+J' = \pm J
+\quad \text{on } \mathcal S.
+\]
+\end{theorem}
+
+\begin{proof}
+
+Since \(J'\) commutes with the symmetry and \(\mathcal S\) is irreducible, the commutant characterization implies that
+\[
+J' = aI + bJ
+\]
+for some real scalars \(a,b\).
+
+The complex structure condition gives
+\[
+(J')^2 = -I.
+\]
+
+Substituting,
+\[
+(aI + bJ)^2
+=
+(a^2 - b^2)I + 2abJ.
+\]
+
+Equating with \(-I\) yields
+\[
+2ab = 0,
+\qquad
+a^2 - b^2 = -1.
+\]
+
+If \(b=0\), then \(J' = aI\), which cannot satisfy \((J')^2 = -I\) for real \(a\).
+
+Thus \(a=0\), and
+\[
+J' = bJ.
+\]
+
+The remaining condition gives
+\[
+b^2 = 1,
+\]
+and therefore
+\[
+J' = \pm J.
+\]
+
+\end{proof}
+
+\subsection{Multiplicity and global structure}
+
+When spectral multiplicity exceeds one, the commutant algebra includes additional operators acting within multiplicity fibers
+\cite{KadisonRingrose,Dixmier}.
+
+Such operators correspond to internal symmetries of multiplicity spaces and are not uniquely determined by the symmetry generator itself.
+
+By contrast, the operator
+\[
+J = A(-A^2)^{-1/2}
+\]
+is defined canonically through functional calculus of the generator and requires no additional choices.
+
+It therefore provides a distinguished symmetry-compatible complex structure determined directly by the symmetry representation.
+
+\subsection{Sign ambiguity and canonical equivalence}
+
+The operator \(-J\) also satisfies all defining properties of a symmetry-compatible complex structure.
+
+This corresponds to complex conjugation and does not alter the isomorphism class of the resulting complex Hilbert space.
+
+Thus, on each irreducible symmetry sector, the symmetry determines a unique compatible complex structure up to sign.
+
+Globally, the functional-calculus operator \(J\) provides the canonical symmetry-induced complex structure associated with the one-parameter symmetry generator.

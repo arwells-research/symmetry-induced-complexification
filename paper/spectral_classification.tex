@@ -1,0 +1,170 @@
+\section{Spectral Classification of the Complexified Subspace}
+
+The preceding sections established that, given the real Hilbert representation and strongly continuous symmetry assumption, one-parameter distinguishability symmetry determines a canonical complex Hilbert structure on the invariant subspace
+\[
+\mathcal{K}_1 := \overline{\mathrm{ran}(A)}.
+\]
+
+We now classify this structure using the spectral decomposition of the symmetry generator.
+
+\subsection{Spectral resolution of the generator}
+
+Since \(A\) is skew-adjoint, the operator \(-A^2\) is self-adjoint and positive semidefinite
+\cite[Theorem VII.2]{ReedSimonI}.
+
+By the spectral theorem for self-adjoint operators, there exists a projection-valued measure
+\[
+E(\lambda)
+\]
+defined on Borel subsets of \([0,\infty)\) such that
+
+\[
+-A^2
+=
+\int_0^\infty \lambda \, dE(\lambda).
+\]
+
+This spectral resolution provides a canonical decomposition of the Hilbert space into invariant subspaces corresponding to spectral regions of the symmetry generator.
+
+\subsection{Characterization of the invariant subspace}
+
+As established in Section 2.2, the invariant subspace admits the characterization
+\[
+\mathcal{K}_1 = \ker(A)^\perp = E((0,\infty))\,\overline{\mathcal{V}}.
+\]
+
+Thus \(\mathcal{K}_1\) is precisely the strictly positive spectral subspace of the operator \(-A^2\), corresponding to the portion of the representation on which the symmetry generator acts nontrivially.
+
+\subsection{Spectral sector decomposition}
+
+For any measurable subset \(\Delta \subset (0,\infty)\), define the invariant subspace
+
+\[
+\mathcal{K}_\Delta := E(\Delta)\,\overline{\mathcal{V}}.
+\]
+
+These spectral subspaces satisfy the standard properties of spectral decompositions:
+
+\begin{enumerate}
+
+\item Orthogonality:
+\[
+\mathcal{K}_{\Delta_1} \perp \mathcal{K}_{\Delta_2}
+\quad \text{if } \Delta_1 \cap \Delta_2 = \varnothing,
+\]
+
+\item Invariance under symmetry:
+\[
+T(t)\mathcal{K}_\Delta \subset \mathcal{K}_\Delta,
+\]
+
+\item Invariance under functional calculus:
+\[
+f(A)\mathcal{K}_\Delta \subset \mathcal{K}_\Delta
+\]
+for any bounded Borel function \(f\),
+
+\item Completeness:
+For any measurable partition of \((0,\infty)\), the invariant subspace
+\(\mathcal{K}_1\) decomposes as the closure of the orthogonal sum of the
+corresponding spectral subspaces. In the general case, this decomposition
+takes the form of a direct integral:
+\[
+\mathcal{K}_1
+=
+\int_{(0,\infty)}^\oplus H_\lambda \, d\mu(\lambda),
+\]
+where each fiber \(H_\lambda\) is invariant under the symmetry and the
+operator \(-A^2\) acts fiberwise as multiplication by \(\lambda\)
+\cite[Theorem VII.2; Section VII.2]{ReedSimonI}.
+
+\end{enumerate}
+
+In general, this decomposition takes the form of a direct integral of invariant Hilbert spaces indexed by the spectrum
+\cite{ReedSimonI,ConwayFA,Dixmier}.
+
+\subsection{Compatibility with the complex structure operator}
+
+The complex structure operator
+
+\[
+J := A(-A^2)^{-1/2}
+\]
+
+is defined via functional calculus of the self-adjoint operator \(-A^2\).
+
+Functional calculus ensures that \(J\) commutes with all spectral projections:
+
+\[
+J E(\Delta) = E(\Delta) J
+\quad \forall \Delta \subset (0,\infty)
+\]
+\cite{ReedSimonI,KadisonRingrose,Dixmier}.
+
+Thus each spectral subspace \(\mathcal{K}_\Delta\) is invariant under \(J\).
+
+Each spectral sector therefore inherits a compatible complex Hilbert space structure.
+
+\subsection{Multiplicity structure}
+
+The spectral theorem represents \(\mathcal{K}_1\) as a direct integral of Hilbert spaces over the spectrum:
+
+\[
+\mathcal{K}_1
+=
+\int^\oplus H_\lambda \, d\mu(\lambda)
+\]
+\cite{ReedSimonI,ConwayFA,Dixmier}.
+
+Each fiber \(H_\lambda\) corresponds to a spectral component with multiplicity equal to \(\dim(H_\lambda)\), which may be finite or infinite.
+
+On each such spectral component, the symmetry generator acts as a rotation operator with frequency determined by \(\sqrt{\lambda}\).
+
+The functional calculus construction defines the complex structure operator fiberwise across this decomposition.
+
+In the presence of spectral multiplicity greater than one, the symmetry generator alone does not uniquely determine the internal operator structure within each multiplicity fiber. The functional-calculus operator
+\[
+J = A(-A^2)^{-1/2}
+\]
+remains canonically defined and provides a symmetry-compatible complex structure on the invariant subspace. However, additional operators acting within multiplicity fibers may exist that also commute with the symmetry generator and therefore are not fixed by the generator alone. In particular, quaternionic Hilbert structure requires the existence of additional complex structure operators satisfying anticommuting relations generating the quaternion algebra. Such additional structure cannot be constructed from a single symmetry generator and would require the presence of further independent symmetry generators imposing additional algebraic constraints.
+
+\paragraph{Sectorwise uniqueness and multiplicity fibers.}
+The uniqueness of the complex structure operator established earlier holds sectorwise on irreducible invariant spectral components of the symmetry generator. In the presence of spectral multiplicity, each fiber $H_\lambda$ may admit additional orthogonal degrees of freedom corresponding to multiplicity rotations that commute with the generator. These internal transformations do not alter the functional-calculus construction of
+\[
+J = A(-A^2)^{-1/2},
+\]
+which remains canonically determined by the generator itself. However, they imply that uniqueness holds relative to the spectral sector decomposition rather than globally across multiplicity fibers. Further reduction of this residual internal freedom requires the presence of additional independent symmetry generators imposing further structural constraints.
+
+\subsection{Classification theorem}
+
+\begin{theorem}[Spectral classification]
+Given the real Hilbert representation and strongly continuous symmetry assumption, the induced complex Hilbert structure decomposes canonically according to the spectral resolution of the symmetry generator.
+
+Each spectral sector inherits a compatible complex Hilbert structure determined by functional calculus of the generator.
+
+The operator
+\[
+J = A(-A^2)^{-1/2}
+\]
+defines the canonical symmetry-compatible complex structure on \(\mathcal{K}_1\).
+\end{theorem}
+
+\begin{proof}
+
+The spectral theorem provides the invariant decomposition into spectral subspaces.
+
+Functional calculus defines the operator \(J\), which commutes with spectral projections.
+
+Thus each spectral sector is invariant under \(J\) and inherits a compatible complex Hilbert structure.
+
+Since \(J\) is defined uniquely by functional calculus of the generator, the resulting complex structure is canonically determined by the symmetry.
+
+\end{proof}
+
+\subsection{Structural interpretation}
+
+This classification shows that, given the real Hilbert representation and strongly continuous symmetry assumption, complex Hilbert structure follows canonically on the invariant subspace from the action of the symmetry generator.
+
+Each spectral sector corresponds to an independent symmetry mode, and the complex structure is induced canonically by the symmetry generator.
+
+No additional representational assumptions are required beyond the real Hilbert representation and symmetry assumption.

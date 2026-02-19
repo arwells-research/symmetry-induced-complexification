@@ -1,0 +1,188 @@
+\section{One-Parameter Distinguishability Symmetry}
+
+We now introduce the additional structural assumption that enables symmetry-induced complexification of the representational Hilbert space.
+
+\begin{definition}[One-parameter distinguishability symmetry]
+A one-parameter distinguishability symmetry is a strongly continuous one-parameter family of bounded operators
+\[
+T : \mathbb{R} \to \mathcal{B}(\overline{\mathcal{V}})
+\]
+such that for all \(t,s \in \mathbb{R}\) and all \(\psi,\phi \in \overline{\mathcal{V}}\):
+
+\begin{enumerate}
+
+\item \emph{Group property:}
+\[
+T(t+s) = T(t)T(s),
+\qquad
+T(0) = I.
+\]
+
+\item \emph{Strong continuity:}
+\[
+\lim_{t \to 0} \|T(t)\psi - \psi\| = 0.
+\]
+
+\item \emph{Distinguishability preservation:}
+\[
+\langle T(t)\psi, T(t)\phi\rangle
+=
+\langle \psi, \phi\rangle.
+\]
+
+\end{enumerate}
+
+\end{definition}
+
+Thus \(T(t)\) is a strongly continuous one-parameter group of orthogonal operators on the real Hilbert space \(\overline{\mathcal{V}}\).
+
+\medskip
+
+\noindent
+\emph{Terminological remark.}
+Earlier work referred to this symmetry as ``cyclic,'' emphasizing its geometric interpretation as a continuous rotation in representation space. The present terminology emphasizes its operator-theoretic formulation as a strongly continuous one-parameter orthogonal group, which enables precise analysis using Stone's theorem, spectral theory, and functional calculus.
+
+\subsection{Generator of the symmetry}
+
+Since \(T(t)\) is a strongly continuous one-parameter group of orthogonal
+operators on the real Hilbert space \(\overline{\mathcal{V}}\), there exists a
+unique densely defined skew-adjoint operator
+\[
+A : \mathcal{D}(A)\subset\overline{\mathcal{V}} \to \overline{\mathcal{V}}
+\]
+such that
+\[
+T(t)=e^{tA}
+\quad \forall t\in\mathbb{R}.
+\]
+
+This result follows from Stone's theorem via complexification of the
+representation. Complexifying \(\overline{\mathcal{V}}\) yields a complex
+Hilbert space \(\overline{\mathcal{V}}_\mathbb{C}\) on which \(T(t)\) extends
+uniquely to a strongly continuous one-parameter unitary group. By Stone's theorem for unitary groups \cite[Theorem VIII.8]{ReedSimonI}; see also
+\cite[Section 10.2]{HallQM}, this unitary group admits a unique self-adjoint
+generator \(H\). The generator of the original real orthogonal group is then
+obtained by restriction of \(iH\) to the invariant real subspace. The original real Hilbert space \(\overline{\mathcal{V}}\)
+is invariant under the unitary group, and the restriction of \(iH\) to
+\(\overline{\mathcal{V}}\) defines the skew-adjoint generator
+\[
+A = iH\big|_{\overline{\mathcal{V}}}
+\]
+of the orthogonal symmetry group. This restriction is well-defined and yields
+the unique skew-adjoint generator of the real orthogonal group, by the standard
+correspondence between strongly continuous orthogonal groups on real Hilbert
+space and skew-adjoint generators obtained via complexification and restriction.
+
+The operator \(A\) is characterized by the strong limit
+\[
+A\psi
+=
+\lim_{t\to 0} \frac{T(t)\psi - \psi}{t},
+\quad \psi \in \mathcal{D}(A),
+\]
+with domain consisting of all vectors for which this limit exists.
+
+Skew-adjointness means
+\[
+\langle A\psi,\phi\rangle
+=
+-
+\langle \psi,A\phi\rangle
+\quad \forall \psi,\phi \in \mathcal{D}(A),
+\]
+and implies that \(A\) is closed and generates the symmetry uniquely
+\cite[Theorem VIII.8]{ReedSimonI}.
+
+Since \(A\) is skew-adjoint, the operator
+\[
+-A^2
+\]
+is self-adjoint and positive semidefinite. This follows from standard
+properties of skew-adjoint operators and the functional calculus for
+self-adjoint operators \cite{ReedSimonI,ConwayFA,KadisonRingrose}.
+
+\subsection{Invariant decomposition}
+
+We now define the canonical invariant subspaces associated with the generator.
+
+Define
+\[
+\mathcal{K}_0 := \ker(A),
+\qquad
+\mathcal{K}_1 := \overline{\mathrm{ran}(A)}.
+\]
+
+The closure in the definition of \(\mathcal{K}_1\) is essential because the range of an unbounded closed operator need not be closed in general.
+
+A standard identity for densely defined closed operators on Hilbert space states that
+\[
+\overline{\mathrm{ran}(A)} = \ker(A^*)^\perp
+\]
+(see, e.g., \cite{ReedSimonI,ConwayFA}).
+
+Since \(A\) is skew-adjoint, \(A^* = -A\), and therefore
+\[
+\ker(A^*) = \ker(A).
+\]
+
+Thus
+\[
+\mathcal{K}_1 = \ker(A)^\perp.
+\]
+
+It follows immediately that
+
+\[
+\overline{\mathcal{V}} = \mathcal{K}_0 \oplus \mathcal{K}_1
+\]
+
+is an orthogonal decomposition into closed subspaces.
+
+Because both subspaces are closed, each inherits a Hilbert space structure from \(\overline{\mathcal{V}}\).
+
+\subsection{Invariance under the symmetry}
+
+The subspaces \(\mathcal{K}_0\) and \(\mathcal{K}_1\) are invariant under the symmetry group.
+
+For \(\psi \in \ker(A)\), one has
+\[
+T(t)\psi = e^{tA}\psi = \psi,
+\]
+so the symmetry acts trivially on \(\mathcal{K}_0\).
+
+Since \(T(t)\) is unitary and preserves orthogonality, it follows that
+\[
+T(t)\mathcal{K}_1 \subset \mathcal{K}_1.
+\]
+
+Thus both subspaces are invariant under the symmetry group.
+
+\subsection{Spectral characterization}
+
+Because \(-A^2\) is self-adjoint and positive semidefinite, the spectral theorem provides a projection-valued measure
+\[
+E(\lambda)
+\]
+such that
+\[
+-A^2 = \int_0^\infty \lambda \, dE(\lambda)
+\]
+(see, e.g., \cite{ReedSimonI,ConwayFA,KadisonRingrose,Dixmier}).
+
+The subspaces defined above admit the spectral characterization
+
+\[
+\mathcal{K}_0 = E(\{0\})\,\overline{\mathcal{V}},
+\qquad
+\mathcal{K}_1 = E((0,\infty))\,\overline{\mathcal{V}}.
+\]
+
+Thus \(\mathcal{K}_1\) is precisely the strictly positive spectral subspace of the generator.
+
+\subsection{Structural role of the invariant subspace}
+
+On \(\mathcal{K}_0\), the symmetry acts trivially and induces no additional structure.
+
+On \(\mathcal{K}_1\), the generator acts nontrivially and admits functional calculus constructions that define additional representational structure.
+
+In the following section, we use the functional calculus of the generator restricted to \(\mathcal{K}_1\) to construct the canonical complex structure operator determined by one-parameter distinguishability symmetry, given the real Hilbert representation and strongly continuous symmetry assumption.

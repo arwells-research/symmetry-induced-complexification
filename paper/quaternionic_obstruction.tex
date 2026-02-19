@@ -1,0 +1,75 @@
+\section[Quaternionic Non-Determinacy]{Non-Determinacy of Quaternionic Hilbert Structure under One-Parameter Symmetry}
+
+The preceding sections established that one-parameter distinguishability symmetry induces a canonical complex Hilbert structure on the invariant subspace
+\[
+\mathcal{K}_1 = \overline{\mathrm{ran}(A)}.
+\]
+We now clarify the extent to which richer scalar-field structures can be determined by the symmetry.
+
+\subsection{Quaternionic Hilbert structure}
+
+A quaternionic Hilbert space may be characterized, in real Hilbert space terms, by the existence of two bounded operators
+\[
+J_1, J_2 : \mathcal{K}_1 \to \mathcal{K}_1
+\]
+satisfying:
+\begin{enumerate}
+\item Complex structure conditions:
+\[
+J_1^2 = J_2^2 = -I,
+\]
+\item Anti-commutation:
+\[
+J_1 J_2 = - J_2 J_1,
+\]
+\item Inner product preservation: for each \(k \in \{1,2\}\),
+\[
+\langle J_k \psi, J_k \phi \rangle
+=
+\langle \psi, \phi \rangle.
+\]
+\end{enumerate}
+These relations generate the quaternion algebra and induce quaternionic scalar multiplication structure \cite{AdlerQuaternionicQM,VaradarajanGeometryQM}.
+
+\subsection{Symmetry compatibility constraint}
+
+A symmetry-compatible operator must commute with the generator in the
+domain-qualified sense appropriate for unbounded operators:
+\[
+J(\mathcal{D}(A)) \subset \mathcal{D}(A),
+\qquad
+JA\psi = AJ\psi
+\quad \forall \psi \in \mathcal{D}(A).
+\]
+
+Equivalently, symmetry-compatible complex structure operators lie in the
+commutant of the generator representation in the sense of unbounded operator
+theory.
+
+Since \(-A^2\) is self-adjoint, the spectral theorem provides a decomposition of \(\mathcal{K}_1\) into invariant spectral sectors \cite{ReedSimonI,KadisonRingrose,Dixmier}. Each irreducible spectral sector corresponds to a minimal invariant subspace under the symmetry action.
+
+\subsection{Commutant structure on irreducible sectors}
+
+On each irreducible spectral sector, the symmetry acts as planar rotation with fixed frequency. On such a sector, the commutant of the symmetry action is commutative \cite{KadisonRingrose,HallQM}.
+
+\subsection{Sectorwise obstruction}
+
+\begin{theorem}[Sectorwise quaternionic obstruction]
+On each irreducible symmetry-invariant spectral sector, no pair of anti-commuting symmetry-compatible complex structure operators can exist.
+\end{theorem}
+
+\begin{proof}
+Let \(\mathcal{S}\) be an irreducible symmetry-invariant spectral sector. Any symmetry-compatible operator must commute with the symmetry generator, hence lie in the commutant of the symmetry action on \(\mathcal{S}\). On \(\mathcal{S}\) this commutant is commutative, so any two symmetry-compatible operators \(J_1,J_2\) must satisfy
+\[
+J_1 J_2 = J_2 J_1.
+\]
+This contradicts the quaternionic anti-commutation requirement \(J_1 J_2 = - J_2 J_1\). Therefore no such pair exists on \(\mathcal{S}\).
+\end{proof}
+
+\subsection{Multiplicity and non-canonical structures}
+
+When spectral multiplicity exceeds one, the commutant of \(A\) includes additional operators acting within multiplicity subspaces \cite{KadisonRingrose,Dixmier}. Quaternionic structures may exist abstractly in such multiplicity spaces, but they are not determined canonically by one-parameter symmetry alone. Additional independent symmetry generators would be required to canonically select quaternionic structure \cite{AdlerQuaternionicQM,VaradarajanGeometryQM}.
+
+\subsection{Structural consequence}
+
+One-parameter distinguishability symmetry canonically induces complex Hilbert structure (via functional calculus) on \(\mathcal{K}_1\). Quaternionic Hilbert structure is not determined by one-parameter symmetry alone.

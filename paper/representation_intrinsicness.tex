@@ -1,0 +1,199 @@
+\section{Representation-Intrinsicness of the Complex Structure}
+
+In the preceding sections, we established that, given the real Hilbert representation and strongly continuous symmetry assumption, one-parameter distinguishability symmetry determines a canonical complex structure operator
+\[
+J := A(-A^2)^{-1/2}
+\]
+on the invariant subspace \(\mathcal{K}_1\) of the canonical real Hilbert representation.
+
+We now show that this complex structure is intrinsic to the distinguishability kernel representation itself. Specifically, we prove that the canonical isometric isomorphism relating any two minimal Hilbert representations transports both the symmetry generator and the induced complex structure consistently.
+
+\subsection{Canonical isometric isomorphism}
+
+Let
+\[
+(\overline{\mathcal{V}}_1, \psi_1)
+\quad \text{and} \quad
+(\overline{\mathcal{V}}_2, \psi_2)
+\]
+be two minimal Hilbert representations of the same distinguishability kernel.
+
+By the representational uniqueness established in the preceding reconstruction, there exists a unique isometric isomorphism
+\[
+U : \overline{\mathcal{V}}_1 \to \overline{\mathcal{V}}_2
+\]
+such that
+\[
+U \psi_1(\gamma) = \psi_2(\gamma)
+\quad \forall \gamma.
+\]
+
+This isomorphism preserves the inner product:
+\[
+\langle U\psi, U\phi \rangle = \langle \psi, \phi \rangle,
+\]
+and therefore is unitary in the real Hilbert-space sense.
+
+\subsection{Transport of symmetry generators}
+
+Suppose the symmetry is represented in the first representation by a strongly continuous one-parameter orthogonal group
+\[
+T_1(t) = e^{tA_1},
+\]
+with skew-adjoint generator \(A_1\).
+
+Define the transported symmetry in the second representation by
+\[
+T_2(t) := U T_1(t) U^{-1}.
+\]
+
+Then \(T_2(t)\) is also a strongly continuous one-parameter orthogonal group.
+
+By Stone's theorem, it admits a unique skew-adjoint generator \(A_2\).
+
+Standard results on transport of generators under unitary equivalence imply that
+\[
+U(\mathcal{D}(A_1)) = \mathcal{D}(A_2),
+\]
+and
+\[
+A_2 U \psi = U A_1 \psi
+\quad \forall \psi \in \mathcal{D}(A_1)
+\]
+\cite[Theorem VIII.8]{ReedSimonI}; see also \cite[Section 10.2]{HallQM}.
+
+Equivalently,
+\[
+A_2 = U A_1 U^{-1}.
+\]
+
+Thus the symmetry generator is transported covariantly under representational isomorphism.
+
+\subsection{Transport of the positive operator and its functional calculus}
+
+Since \(A_1\) and \(A_2\) are skew-adjoint and unitarily equivalent, the associated positive self-adjoint operators
+\[
+|A_1| := (-A_1^2)^{1/2},
+\qquad
+|A_2| := (-A_2^2)^{1/2}
+\]
+satisfy
+\[
+|A_2| = U |A_1| U^{-1}.
+\]
+
+By the spectral theorem, functional calculus of self-adjoint operators is covariant under unitary equivalence. In particular,
+\[
+|A_2|^{-1}
+=
+U |A_1|^{-1} U^{-1}
+\]
+on the corresponding invariant subspaces
+\cite{ReedSimonI,KadisonRingrose,Dixmier}.
+
+\subsection{Transport of the polar decomposition}
+
+Since each generator admits a polar decomposition,
+\[
+A_1 = J_1 |A_1|,
+\qquad
+A_2 = J_2 |A_2|,
+\]
+where \(J_1\) and \(J_2\) are the associated partial isometries (unitary on the invariant subspaces),
+we may substitute the transported operators to obtain
+
+\[
+A_2
+=
+U A_1 U^{-1}
+=
+U J_1 |A_1| U^{-1}
+=
+(U J_1 U^{-1})(U |A_1| U^{-1})
+=
+(U J_1 U^{-1}) |A_2|.
+\]
+
+By uniqueness of the partial isometry in the polar decomposition of a closed operator
+\cite[Theorem VI.13]{ReedSimonI},
+it follows that
+
+\[
+J_2 = U J_1 U^{-1}.
+\]
+
+\begin{definition}[Representation-intrinsic structure]
+Let a distinguishability kernel and symmetry be given, and let
+\[
+(\overline{\mathcal{V}}_1, T_1(t))
+\quad \text{and} \quad
+(\overline{\mathcal{V}}_2, T_2(t))
+\]
+be two minimal Hilbert space representations related by the canonical
+isometric isomorphism
+\[
+U : \overline{\mathcal{V}}_1 \to \overline{\mathcal{V}}_2.
+\]
+
+A structural feature of the representation is called
+\emph{representation-intrinsic} if it is preserved under this canonical
+isometric isomorphism. That is, the corresponding operators or structures
+are transported by \(U\) according to
+\[
+\mathcal{S}_2 = U \mathcal{S}_1 U^{-1}.
+\]
+
+Equivalently, representation-intrinsic structure depends only on the
+distinguishability kernel and symmetry representation itself, and not on
+any particular Hilbert space realization.
+\end{definition}
+
+\subsection{Intrinsicness theorem}
+
+\begin{theorem}[Representation-intrinsicness]
+Let
+\[
+(\overline{\mathcal{V}}_1, J_1)
+\quad \text{and} \quad
+(\overline{\mathcal{V}}_2, J_2)
+\]
+be complex Hilbert structures determined by symmetry generators arising from two minimal real Hilbert representations of the same distinguishability kernel and symmetry.
+
+Then the canonical isometric isomorphism
+\[
+U : \overline{\mathcal{V}}_1 \to \overline{\mathcal{V}}_2
+\]
+satisfies
+\[
+U J_1 = J_2 U.
+\]
+
+\end{theorem}
+
+\begin{proof}
+
+The generators satisfy
+\[
+A_2 = U A_1 U^{-1},
+\]
+and therefore the associated positive operators satisfy
+\[
+|A_2| = U |A_1| U^{-1}.
+\]
+
+The polar decompositions are uniquely determined by these operators. Substituting the transported operators into the polar decomposition and using uniqueness of the partial isometry yields
+\[
+J_2 = U J_1 U^{-1}.
+\]
+
+\end{proof}
+
+\subsection{Structural consequence}
+
+This result shows that, given the real Hilbert representation and symmetry assumption, the symmetry-induced complex structure is intrinsic to the distinguishability kernel together with its symmetry representation.
+
+It does not depend on arbitrary choices in the Hilbert-space realization.
+
+Any two minimal Hilbert representations of the same distinguishability kernel and symmetry yield canonically isomorphic complex Hilbert structures.
+
+Thus, given the real Hilbert representation and strongly continuous symmetry assumption, complex scalar multiplication follows as a representation-intrinsic structural consequence of one-parameter distinguishability symmetry.
