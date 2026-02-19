@@ -1,4 +1,5 @@
 # Symmetry-Induced Complexification of Distinguishability Representation
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18692887.svg)](https://doi.org/10.5281/zenodo.18692887)
 
 **Author:** A. R. Wells  
 **Affiliation:** Dual-Frame Research Group  
@@ -50,20 +51,20 @@ The symmetry parameter is treated purely as a symmetry parameter; no temporal in
 ## Repository Structure
 
 ```
-.
-├── CITATION.cff
+symmetry-induced-complexification/
+├── README.md
 ├── LICENSE
 ├── LICENSE-CCBY
-├── README.md
+├── CITATION.cff
 ├── build_paper.sh
 └── paper/
     ├── main.tex
     ├── introduction.tex
-    ├── setup_and_assumptions.tex
+    ├── cyclic_symmetry_structure.tex
     ├── complex_structure_construction.tex
-    ├── uniqueness_up_to_sign.tex
+    ├── complex_structure_uniqueness.tex
     ├── representation_intrinsicness.tex
-    ├── spectral_sector_classification.tex
+    ├── spectral_classification.tex
     ├── quaternionic_obstruction.tex
     ├── discussion.tex
     └── references.bib
@@ -87,3 +88,14 @@ Or manually:
 cd paper
 latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 ```
+
+## Citation
+
+Recommended citation:
+
+Wells, A. R. (2026).  
+*Symmetry-Induced Complexification of Distinguishability Representation*.  
+Zenodo. https://doi.org/10.5281/zenodo.18692887 
+
+This work is released under Creative Commons Attribution 4.0 (CC BY 4.0).
+
